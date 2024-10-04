@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A/a</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+
+        let input = "Ana e Juliana amam a amizade uma da outra";
+
+        console.log("String definida:", input);
+
+        // Função que verifica a letra A/a
+        function verificarLetra(str) {
+            let cont = 0;
+
+            //laço de repetição para percorrer a string e verificar A/a
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === 'A' || str[i] === 'a') {
+                    cont++;
+                }
+            }
+
+            //resultado no console
+            if (cont < 2) {
+                console.log(`A letra 'A/a' aparece ${cont} vez na string.`);
+            } else {
+                console.log(`A letra 'A/a' aparece ${cont} vezes na string.`);
+            }
+
+
+        }
+
+        // Chama a função 
+        verificarLetra(input);
+    </script>
+</body>
+</html>

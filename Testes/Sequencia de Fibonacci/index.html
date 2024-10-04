@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci JS</title>
+</head>
+
+<body>
+    <script>
+
+        //qtd de numeros p/ a sequência de Fibonacci
+        let qtdNum = prompt("Digite a quantidade de números da sequência")
+        qtdNum = parseInt(qtdNum)
+
+        // verificar se é ou não da sequência 
+        let numVerificar = prompt("Digite o número que deseja verificar se pertence ou não a sequência de Fibonacci")
+        numVerificar = parseInt(numVerificar)
+
+        let t1 = 0
+        let t2 = 1
+        let t3 = 0
+
+        // array p/ armazenar a sequência 0,1
+        let sequencia = [t1, t2]
+
+        // calculo sequência
+        for (let i = 2; i < qtdNum; i++) {
+            t3 = t1 + t2
+            sequencia.push(t3) //implementando array
+            t1 = t2
+            t2 = t3
+        }
+
+        // mostra no console a sequência 
+        console.log("Sequência de Fibonacci: ", sequencia)
+
+        // função para identificar se pertence ou não a sequência 
+        function pertenceSequencia(num) {
+            if (sequencia.includes(num)) {
+                return `O número ${num} pertence a sequência de Fibonacci`
+            } else {
+                return `O número ${num} não pertence a sequência de Fibonacci`
+            }
+        }
+
+        // chamando a função e verificando
+        console.log(pertenceSequencia(numVerificar))
+
+
+
+    </script>
+</body>
+</html>
